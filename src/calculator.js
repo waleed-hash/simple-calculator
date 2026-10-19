@@ -19,11 +19,24 @@ function divide(a, b) {
   return a / b;
 }
 
+function power(a, b) {
+  return a ** b;
+}
+
+function modulo(a, b) {
+  if (b === 0) {
+    throw new Error('Cannot take modulo by zero');
+  }
+  return a % b;
+}
+
 const operations = {
   '+': add,
   '-': subtract,
   '*': multiply,
   '/': divide,
+  '^': power,
+  '%': modulo,
 };
 
 function calculate(a, operator, b) {
@@ -34,4 +47,4 @@ function calculate(a, operator, b) {
   return fn(a, b);
 }
 
-module.exports = { add, subtract, multiply, divide, calculate };
+module.exports = { add, subtract, multiply, divide, power, modulo, calculate };
