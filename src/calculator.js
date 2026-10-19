@@ -19,6 +19,13 @@ function divide(a, b) {
   return a / b;
 }
 
+function squareRoot(a) {
+  if (a < 0) {
+    throw new Error('Cannot take the square root of a negative number');
+  }
+  return Math.sqrt(a);
+}
+
 const operations = {
   '+': add,
   '-': subtract,
@@ -34,4 +41,4 @@ function calculate(a, operator, b) {
   return fn(a, b);
 }
 
-module.exports = { add, subtract, multiply, divide, calculate };
+module.exports = { add, subtract, multiply, divide, squareRoot, calculate };
