@@ -1,0 +1,9 @@
+{
+  "name": "simple-calculator",
+  "version": "1.0.0",
+  "description": "A tiny command-line calculator",
+  "main": "src/calculator.js",
+  "bin": { "calc": "src/cli.js" },
+  "scripts": { "test": "node --test test/" },
+  "license": "MIT"
+}
